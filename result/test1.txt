@@ -34,6 +34,7 @@ Xiaomi Redmi Note 7 3/32GB Black (Міжнародна версія)
 Samsung Galaxy A50 4/64GB Blue (SM-A505FZBUSEK)
 Xiaomi Mi 9 SE 6/64GB Piano Black
 Xiaomi Redmi Note 7 3/32GB Blue (Global ROM + OTA)
+Xiaomi Redmi 5 Plus 4/64GB Black (Global Rom + OTA)
 Xiaomi Redmi 7 3/32GB Comet Blue
 Huawei P Smart 2019 3/64GB Aurora Blue (51093FTA) + чохол у подарунок!
 Nokia X6 4/64GB Black (Global ROM + OTA)
@@ -46,7 +47,6 @@ Samsung Galaxy J2 2018 Black (SM-J250FZKDSEK) + карта пам'яті Samsung
 Xiaomi Redmi Go 1/8GB Black
 Xiaomi Mi A2 4/64GB Black (Міжнародна версія)
 Huawei Y5 2018 Black
-Xiaomi Redmi Note 5 4/64GB Blue (Global Rom + OTA)
 Xiaomi Mi 9 6/64GB Black
 TP-Link Neffos С9 (TP707A24UA) Cloudy Grey
 Xiaomi Redmi Go 1/8GB Blue
@@ -59,9 +59,9 @@ Xiaomi Redmi 7 3/32GB Eclipse Black (Міжнародна версія)
 Xiaomi Redmi 6A 2/32GB Gold
 Doogee X60 Matte Black
 Prestigio Muze U3 LTE Black (PSP3515DUOBLACK)
+Xiaomi Redmi Note 6 Pro 3/32GB Black (Міжнародна версія)
 Huawei Y6 2019 Brown Faux Leather
 Samsung Galaxy A40 4/64GB Black (SM-A405FZKDSEK)
-TP-Link Neffos C5a (TP703A21UA) Grey + чохол у подарунок!
 Huawei Y6 2019 Brown Faux Leather
 Xiaomi Redmi 6 4/64GB Blue (Міжнародна версія)
 Samsung Galaxy A40 4/64GB Black (SM-A405FZKDSEK)
@@ -73,12 +73,12 @@ Sigma mobile X-treme PQ54 Black (6500mAh) з бездротовою зарядк
 Samsung Galaxy S9 64GB Midnight Black + карта пам'яті Samsung 128GB у подарунок!
 Nokia 7 Plus Dual Sim Black
 Xiaomi Redmi 7 3/64GB Eclipse Black
+Samsung Galaxy A10 2/32GB Blue (SM-A105FZBGSEK)
 Xiaomi Mi A2 Lite 3/32GB Black (Міжнародна версія)
 TP-Link Neffos C5 Plus (TP7031A21UA) 1/8GB Grey + чохол у подарунок!
 Huawei P30 Pro 6/128GB Aurora + сертифікат на 2000 грн. у подарунок!
 Xiaomi Redmi 7 2/16GB Eclipse Black
 Samsung Galaxy A9 2018 128GB Black + карта пам'яті Samsung 128GB у подарунок!
-Huawei P20 Pro 6/128GB Twilight
 Samsung Galaxy J6 2/32GB Lavenda (SM-J600FZVDSEK) + карта пам'яті Samsung 64GB у подарунок!
 Samsung Galaxy Note 9 6/128GB Ocean Blue + карта пам'яті Samsung 128GB у подарунок!
 Sigma mobile X-treme PQ24 Black
@@ -90,7 +90,7 @@ Xiaomi Redmi 6 4/64GB Grey (Global Rom + OTA)
 iPhone 7 Plus 128Gb Rose Gold
 ZTE Blade V10 Vita 2/32GB Black
 Samsung Galaxy A20 3/32GB Red (SM-A205FZRVSEK)
-iPhone 8 Plus 64GB Space Grey (MQ8L2)
 Apple iPhone Xs Max 256GB Space Gray (MT682)
 Samsung Galaxy A6+ SM-A605 3/32GB Blue (SM-A605FZBNSEK)
 Apple iPhone 6 16GB Space Gray
+Sony Xperia 10 Plus Dual Black
