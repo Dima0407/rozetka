@@ -31,7 +31,7 @@ public abstract class ProductsPage extends ParentPage {
         String spinnerXpath = ".//div[@class = 'g-i-tile g-i-tile-catalog preloader-trigger run-animation']";
         actions.clickOnElement(downloadYetPage);
         actions.waitUntilElementHidden(spinnerXpath, 50);
-        logger.info("Завантажено ще одну сторінку з товарами");
+        logger.info("Loaded yet product page");
     }
 
     @Step

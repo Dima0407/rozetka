@@ -73,9 +73,9 @@ public class NotificatorMail {
 
             Transport.send(message);
 
-            logger.info("Результати експортовано [" + addressList.substring(0, addressList.length() - 1) + "]");
+            logger.info("Results are exported [" + addressList.substring(0, addressList.length() - 1) + "]");
         } catch (MessagingException e) {
-            logger.error("Помилка експорту результатів [" + addressList.substring(0, addressList.length() - 1) + "]");
+            logger.error("Error exporting results [" + addressList.substring(0, addressList.length() - 1) + "]");
             e.printStackTrace();
         }
     }
@@ -86,7 +86,7 @@ public class NotificatorMail {
         try {
             lines = Files.readAllLines(Paths.get(filePath), StandardCharsets.UTF_8);
         } catch (IOException e) {
-            logger.error("Помилка при зчитуванні файлу [" + filePath + "]");
+            logger.error("Error reading a file [" + filePath + "]");
             e.printStackTrace();
         }
         if (lines != null) {

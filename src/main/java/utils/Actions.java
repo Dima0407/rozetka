@@ -22,8 +22,8 @@ public class Actions {
         try {
             executor.executeScript("arguments[0].click();", element);
         } catch (Exception e) {
-            logger.error("Не можу натиснути на [" + element + "]\n" + e);
-            Assert.fail("Не можу натиснути на [" + element + "]\n" + e);
+            logger.error("Can not click on [" + element + "]\n" + e);
+            Assert.fail("Can not click on [" + element + "]\n" + e);
         }
     }
 
@@ -31,8 +31,8 @@ public class Actions {
         try {
             webDriver.navigate().to(URL);
         } catch (Exception e) {
-            logger.error("Не можу перейти до [" + URL + "]\n" + e);
-            Assert.fail("Не можу перейти до [" + URL + "]\n" + e);
+            logger.error("Can not go to [" + URL + "]\n" + e);
+            Assert.fail("Can not go to [" + URL + "]\n" + e);
         }
     }
 
@@ -62,7 +62,7 @@ public class Actions {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        logger.warn("Не дочекався поки сховається елемент [" + xpath + "]");
+        logger.warn("Did not wait while the element is hiding [" + xpath + "]");
     }
 
     public String getElementAttribute(String attribute, WebElement webElement) {

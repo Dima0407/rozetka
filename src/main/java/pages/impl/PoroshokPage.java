@@ -21,6 +21,7 @@ public class PoroshokPage extends ProductsPage {
     public void exportResultToDB(HashMap<String, Long> result) {
         for (String name : result.keySet()) {
             System.out.println(name + " -> " + result.get(name));
+
         }
         //TODO допиляти експорт
     }

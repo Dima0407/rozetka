@@ -1,5 +1,6 @@
 package parent;
 
+import db.MysqlManager;
 import excel.ExcelManager;
 import io.qameta.allure.Attachment;
 import notificator.NotificatorMail;
@@ -35,6 +36,7 @@ public class ParentTest {
     protected PobutovaHimiyaPage pobutovaHimiyaPage;
     protected PoroshokPage poroshokPage;
     protected ExcelManager excelManager;
+    protected MysqlManager mysqlManager;
 
     @Before
     public void setUp() {
@@ -47,6 +49,7 @@ public class ParentTest {
         webDriver.manage().timeouts().implicitlyWait(Long.valueOf(properties.getProperty("wait.element")), TimeUnit.MILLISECONDS);
         notificatorMail = new NotificatorMail();
         excelManager = new ExcelManager();
+        mysqlManager = new MysqlManager();
 
         //INIT PAGES
         homePage = new HomePage(webDriver, properties);

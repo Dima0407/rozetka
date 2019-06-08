@@ -35,15 +35,16 @@ public abstract class ParentPage {
     public void exportResultToFile(String path, ArrayList<String> values) {
         try {
             BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(
-                    new FileOutputStream(path), "UTF-8"));
+//                    new FileOutputStream(path), "UTF-8"));
+                    new FileOutputStream(path)));
             for (String item : values) {
                 writer.write(item);
                 writer.newLine();
             }
             writer.close();
-            logger.info("Результати експортовано [" + path + "]");
+            logger.info("Results are exported [" + path + "]");
         } catch (IOException e) {
-            logger.error("Помилка експорту результатів [" + path + "]");
+            logger.error("Error exporting results [" + path + "]");
             e.printStackTrace();
         }
     }

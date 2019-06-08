@@ -61,9 +61,9 @@ public class ExcelManager {
         try {
             FileOutputStream outFile = new FileOutputStream(file);
             workbook.write(outFile);
-            logger.info("Результати експортовано [" + file.getAbsolutePath() + "]");
+            logger.info("Results are exported [" + file.getAbsolutePath() + "]");
         } catch (IOException e) {
-            logger.error("Помилка експорту результатів [" + file.getAbsolutePath() + "]");
+            logger.error("Error exporting results [" + file.getAbsolutePath() + "]");
             e.printStackTrace();
         }
     }

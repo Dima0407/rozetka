@@ -22,7 +22,7 @@ public class TelephonePage extends ParentPage {
     @Step
     public void goToCategory(Category category) {
         actions.clickOnElement(categoryItem(category));
-        logger.info("Виконано перехід до категорії \"" + category.getValue() + "\" [" + webDriver.getCurrentUrl() + "]");
+        logger.info("Moved to category \"" + category.getValue() + "\" [" + webDriver.getCurrentUrl() + "]");
     }
 
     private WebElement categoryItem(Category category) {

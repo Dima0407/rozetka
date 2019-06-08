@@ -27,7 +27,7 @@ public class HomePage extends ParentPage {
     @Step
     public void open() {
         actions.navigateToURL(url);
-        logger.info("Стартову сторінку відкрито [" + webDriver.getCurrentUrl() + "]");
+        logger.info("Starting page is open [" + webDriver.getCurrentUrl() + "]");
     }
 
     @Step
@@ -38,9 +38,9 @@ public class HomePage extends ParentPage {
         }
         String selectedLangMessage;
         if (lang.toLowerCase().equals("ua")) {
-            selectedLangMessage = "Вибрано українську мову";
+            selectedLangMessage = "Ukrainian language is selected";
         } else {
-            selectedLangMessage = "Вибрано російську мову";
+            selectedLangMessage = "Russian language is selected";
         }
         logger.info(selectedLangMessage);
     }
@@ -48,7 +48,7 @@ public class HomePage extends ParentPage {
     @Step
     public void goToCategory(Category category) {
         actions.clickOnElement(categoryItem(category));
-        logger.info("Виконано перехід до категорії \"" + category.getValue() + "\" [" + webDriver.getCurrentUrl() + "]");
+        logger.info("Moved to category \"" + category.getValue() + "\" [" + webDriver.getCurrentUrl() + "]");
     }
 
     private WebElement categoryItem(Category category) {

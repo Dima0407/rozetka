@@ -27,7 +27,8 @@ public class Scripts extends ParentTest {
         tovaryDlyaDomuPage.goToCategory(Category.POBUTOVA_HIMIYA);
         pobutovaHimiyaPage.goToCategory(Category.POROSHOK);
         poroshokPage.downloadYetPage(4);
-        poroshokPage.exportResultToDB(poroshokPage.getProductByPriceRange(100L, 300L));
+//        poroshokPage.exportResultToDB(poroshokPage.getProductByPriceRange(100L, 300L));
+        mysqlManager.setResultToDB(poroshokPage.getProductByPriceRange(100L, 300L));
     }
 
     @Test

@@ -19,7 +19,7 @@ public class PropertiesLoader {
         try {
             properties.load(new FileInputStream(path));
         } catch (IOException e) {
-            logger.error("Не вдалося завантажити properties [" + path + "]");
+            logger.error("Failed to load properties [" + path + "]");
             e.printStackTrace();
         }
         return properties;
