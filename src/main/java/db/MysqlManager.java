@@ -37,7 +37,7 @@ public class MysqlManager {
         Connection con = null;
         Statement stmt = null;
         try {
-            Class.forName(driverClass);
+            Class.forName(driverClass).newInstance();
             con = DriverManager.getConnection(url, user, pass);
             stmt = con.createStatement();
 
@@ -48,9 +48,7 @@ public class MysqlManager {
                 stmt.executeUpdate(query);
             }
             logger.info("Results are exported to DB [" + url + "]");
-        } catch (SQLException e) {
-            e.printStackTrace();
-        } catch (ClassNotFoundException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         } finally {
             try {

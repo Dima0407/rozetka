@@ -5,7 +5,6 @@ import models.Product;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
 import utils.ComparatorMap;
 
 import java.util.ArrayList;
@@ -19,9 +18,6 @@ import java.util.Properties;
  */
 public abstract class ProductsPage extends ParentPage {
 
-    @FindBy(xpath = ".//a[@class = 'novisited g-i-more-link']")
-    private WebElement downloadYetPage;
-
     public ProductsPage(WebDriver webDriver, Properties properties) {
         super(webDriver, properties);
     }
@@ -29,7 +25,8 @@ public abstract class ProductsPage extends ParentPage {
     @Step
     public void downloadYetPage() {
         String spinnerXpath = ".//div[@class = 'g-i-tile g-i-tile-catalog preloader-trigger run-animation']";
-        actions.clickOnElement(downloadYetPage);
+        String xpath = ".//a[@class = 'novisited g-i-more-link']";
+        actions.clickOnElement(actions.waitUntilElementPresent(xpath, 20));
         actions.waitUntilElementHidden(spinnerXpath, 50);
         logger.info("Loaded yet product page");
     }

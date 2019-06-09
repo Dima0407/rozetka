@@ -2,7 +2,6 @@ package pages.impl;
 
 import enums.Category;
 import io.qameta.allure.Step;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -47,12 +46,8 @@ public class HomePage extends ParentPage {
 
     @Step
     public void goToCategory(Category category) {
-        actions.clickOnElement(categoryItem(category));
-        logger.info("Moved to category \"" + category.getValue() + "\" [" + webDriver.getCurrentUrl() + "]");
-    }
-
-    private WebElement categoryItem(Category category) {
-        String xpath = ".//li[@class = 'menu-categories__item']/a[contains(text(), '" + category.getValue() + "')]";
-        return webDriver.findElement(By.xpath(xpath));
+        String xpath = ".//ul[@class = 'menu-categories menu-categories_type_main']/li[@class = 'menu-categories__item']/a[@class = 'menu-categories__link' and contains(@href,  '" + category.getValue() + "')]";
+        actions.clickOnElement(actions.waitUntilElementPresent(xpath, 50));
+        logger.info("Moved to category \"" + category.name() + "\" [" + webDriver.getCurrentUrl() + "]");
     }
 }

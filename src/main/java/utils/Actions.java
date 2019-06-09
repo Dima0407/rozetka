@@ -7,6 +7,8 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
+import java.util.List;
+
 public class Actions {
 
     private Logger logger = Logger.getLogger(getClass());
@@ -63,6 +65,27 @@ public class Actions {
             e.printStackTrace();
         }
         logger.warn("Did not wait while the element is hiding [" + xpath + "]");
+    }
+
+    public WebElement waitUntilElementPresent(String xpath, int attempts) {
+        int count = 0;
+
+        try {
+            while (count <= attempts) {
+                List<WebElement> elements = webDriver.findElements(By.xpath(xpath));
+                if (!elements.isEmpty()) {
+                    return elements.get(0);
+                } else {
+                    Thread.sleep(500);
+                    count++;
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        logger.warn("Did not wait while the element is displayed [" + xpath + "]");
+        Assert.fail();
+        return null;
     }
 
     public String getElementAttribute(String attribute, WebElement webElement) {
