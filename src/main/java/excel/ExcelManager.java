@@ -25,7 +25,7 @@ public class ExcelManager {
     public HSSFWorkbook createWorkbook(int sheetCount) {
         HSSFWorkbook workbook = new HSSFWorkbook();
         for (int i = 0; i < sheetCount; i++) {
-            workbook.createSheet("Сторінка " + (i + 1));
+            workbook.createSheet("Page " + (i + 1));
         }
         return workbook;
     }

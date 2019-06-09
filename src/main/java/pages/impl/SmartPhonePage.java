@@ -21,8 +21,8 @@ public class SmartPhonePage extends ProductsPage {
     @Step
     public HSSFWorkbook createWorkbook() {
         ArrayList<String> headers = new ArrayList<>();
-        headers.add("Продукт");
-        headers.add("Ціна");
+        headers.add("Name");
+        headers.add("Price");
         HSSFWorkbook workbook = excelManager.createWorkbook(2);
         excelManager.addHeadersToCells(workbook, 0, headers);
         excelManager.addHeadersToCells(workbook, 1, headers);
