@@ -120,7 +120,7 @@
                             <systemProperties>
                                 <property>
                                     <name>allure.results.directory</name>
-                                    <value>C:\Users\Admin\.jenkins\workspace\maven-jlr\allure-results</value>
+                                    <value>C:\Users\Admin\.jenkins\workspace\rozetka\allure-results</value>
                                 </property>
                         </systemProperties>
                     </configuration>
