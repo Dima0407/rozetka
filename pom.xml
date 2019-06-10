@@ -117,15 +117,11 @@
                                 <value>io.qameta.allure.junit4.AllureJunit4</value>
                             </property>
                         </properties>
-                        <systemProperties>
-                            <property>
-                                <name>allure.results.directory</name>
-                                <value>${project.build.directory}/allure-results</value>
-                            </property>
-<!--                            <property>-->
-<!--                                <name>allure.link.issue.pattern</name>-->
-<!--                                <value>https://trello.com/c/{}</value>-->
-<!--                            </property>-->
+                            <systemProperties>
+                                <property>
+                                    <name>allure.results.directory</name>
+                                    <value>C:\Users\Admin\.jenkins\workspace\maven-jlr\allure-results</value>
+                                </property>
                         </systemProperties>
                     </configuration>
                     <dependencies>
