@@ -22,11 +22,7 @@ import java.util.concurrent.TimeUnit;
 public class ParentTest {
 
     private final String PATH_TO_PROPERTIES = "src/main/resources/app.properties";
-
-    private Properties properties;
-    private WebDriver webDriver;
     protected NotificatorMail notificatorMail;
-
     //PAGES
     protected HomePage homePage;
     protected TelefonyTvEhlektronikaPage telefonyTvEhlektronikaPage;
@@ -37,30 +33,8 @@ public class ParentTest {
     protected PoroshokPage poroshokPage;
     protected ExcelManager excelManager;
     protected MysqlManager mysqlManager;
-
-    @Before
-    public void setUp() {
-        this.properties = PropertiesLoader.loadProperties(PATH_TO_PROPERTIES);
-
-        System.setProperty(properties.getProperty("driver.name"),
-                new File(properties.getProperty("driver.path")).getAbsolutePath());
-        webDriver = new ChromeDriver();
-        webDriver.manage().window().maximize();
-        webDriver.manage().timeouts().implicitlyWait(Long.valueOf(properties.getProperty("wait.element")), TimeUnit.MILLISECONDS);
-        notificatorMail = new NotificatorMail();
-        excelManager = new ExcelManager();
-        mysqlManager = new MysqlManager();
-
-        //INIT PAGES
-        homePage = new HomePage(webDriver, properties);
-        telefonyTvEhlektronikaPage = new TelefonyTvEhlektronikaPage(webDriver, properties);
-        telephonePage = new TelephonePage(webDriver, properties);
-        smartPhonePage = new SmartPhonePage(webDriver, properties);
-        tovaryDlyaDomuPage = new TovaryDlyaDomuPage(webDriver, properties);
-        pobutovaHimiyaPage = new PobutovaHimiyaPage(webDriver, properties);
-        poroshokPage = new PoroshokPage(webDriver, properties);
-    }
-
+    private Properties properties;
+    private WebDriver webDriver;
     @Rule
     public TestWatcher watchman = new TestWatcher() {
 
@@ -86,4 +60,27 @@ public class ParentTest {
             webDriver.quit();
         }
     };
+
+    @Before
+    public void setUp() {
+        this.properties = PropertiesLoader.loadProperties(PATH_TO_PROPERTIES);
+
+        System.setProperty(properties.getProperty("driver.name"),
+                new File(properties.getProperty("driver.path")).getAbsolutePath());
+        webDriver = new ChromeDriver();
+        webDriver.manage().window().maximize();
+        webDriver.manage().timeouts().implicitlyWait(Long.valueOf(properties.getProperty("wait.element")), TimeUnit.MILLISECONDS);
+        notificatorMail = new NotificatorMail();
+        excelManager = new ExcelManager();
+        mysqlManager = new MysqlManager();
+
+        //INIT PAGES
+        homePage = new HomePage(webDriver, properties);
+        telefonyTvEhlektronikaPage = new TelefonyTvEhlektronikaPage(webDriver, properties);
+        telephonePage = new TelephonePage(webDriver, properties);
+        smartPhonePage = new SmartPhonePage(webDriver, properties);
+        tovaryDlyaDomuPage = new TovaryDlyaDomuPage(webDriver, properties);
+        pobutovaHimiyaPage = new PobutovaHimiyaPage(webDriver, properties);
+        poroshokPage = new PoroshokPage(webDriver, properties);
+    }
 }
