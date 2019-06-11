@@ -1,11 +1,10 @@
 package pages.parent;
 
 import excel.ExcelManager;
+import io.qameta.allure.Step;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.Wait;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import utils.Actions;
 
 import java.io.BufferedWriter;
@@ -32,10 +31,10 @@ public abstract class ParentPage {
         PageFactory.initElements(webDriver, this);
     }
 
+    @Step
     public void exportResultToFile(String path, ArrayList<String> values) {
         try {
             BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(
-//                    new FileOutputStream(path), "UTF-8"));
                     new FileOutputStream(path)));
             for (String item : values) {
                 writer.write(item);

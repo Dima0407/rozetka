@@ -17,6 +17,6 @@ public class TelefonyTvEhlektronikaPage extends ParentPage {
     public void goToCategory(Category category) {
         String xpath = ".//li/*/a[contains(@href, '" + category.getValue() + "')]";
         actions.clickOnElement(actions.waitUntilElementPresent(xpath, 20));
-        logger.info("Moved to category \"" +  category.name() + "\" [" + webDriver.getCurrentUrl() + "]");
+        logger.info("Moved to category \"" + category.name() + "\" [" + webDriver.getCurrentUrl() + "]");
     }
 }

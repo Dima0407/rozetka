@@ -12,10 +12,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Properties;
 
-/**
- * Created by Dmytro Torlop
- * on 30.05.19
- */
 public abstract class ProductsPage extends ParentPage {
 
     public ProductsPage(WebDriver webDriver, Properties properties) {

@@ -10,7 +10,6 @@ public class Scripts extends ParentTest {
     @Test
     public void scenarioOne() {
         homePage.open();
-//        homePage.selectLanguage("ua");
         homePage.goToCategory(Category.TELEFONY_TV_EHLECTRONIKA);
         telefonyTvEhlektronikaPage.goToCategory(Category.TELEFONY);
         telephonePage.goToCategory(Category.SMARTFONY);
@@ -22,7 +21,6 @@ public class Scripts extends ParentTest {
     @Test
     public void scenarioTwo() {
         homePage.open();
-//        homePage.selectLanguage("ua");
         homePage.goToCategory(Category.TOVARY_DLYA_DOMU);
         tovaryDlyaDomuPage.goToCategory(Category.POBUTOVA_HIMIYA);
         pobutovaHimiyaPage.goToCategory(Category.POROSHOK);
@@ -33,7 +31,6 @@ public class Scripts extends ParentTest {
     @Test
     public void scenarioThree() {
         homePage.open();
-//        homePage.selectLanguage("ua");
         homePage.goToCategory(Category.TELEFONY_TV_EHLECTRONIKA);
         telefonyTvEhlektronikaPage.goToCategory(Category.TELEFONY);
         telephonePage.goToCategory(Category.SMARTFONY);

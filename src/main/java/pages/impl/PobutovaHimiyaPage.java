@@ -7,10 +7,6 @@ import pages.parent.ParentPage;
 
 import java.util.Properties;
 
-/**
- * Created by Dmytro Torlop
- * on 05.06.19
- */
 public class PobutovaHimiyaPage extends ParentPage {
 
     public PobutovaHimiyaPage(WebDriver webDriver, Properties properties) {
@@ -20,6 +16,6 @@ public class PobutovaHimiyaPage extends ParentPage {
     @Step
     public void goToCategory(Category category) {
         actions.clickOnElement(actions.waitUntilElementPresent(category.getValue(), 20));
-        logger.info("Moved to category \"" +  category.name() + "\" [" + webDriver.getCurrentUrl() + "]");
+        logger.info("Moved to category \"" + category.name() + "\" [" + webDriver.getCurrentUrl() + "]");
     }
 }

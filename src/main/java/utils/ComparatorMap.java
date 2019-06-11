@@ -2,10 +2,6 @@ package utils;
 
 import java.util.*;
 
-/**
- * Created by Dmytro Torlop
- * on 05.06.19
- */
 public class ComparatorMap {
 
     public static HashMap sortByValuesDesc(HashMap map1) {

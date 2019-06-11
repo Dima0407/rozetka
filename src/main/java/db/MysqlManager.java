@@ -1,5 +1,6 @@
 package db;
 
+import io.qameta.allure.Step;
 import org.apache.log4j.Logger;
 import utils.PropertiesLoader;
 
@@ -10,10 +11,6 @@ import java.sql.Statement;
 import java.util.HashMap;
 import java.util.Properties;
 
-/**
- * Created by Dmytro Torlop
- * on 06.06.19
- */
 public class MysqlManager {
 
     private final String PATH_TO_PROPERTIES = "src/main/resources/db.properties";
@@ -33,6 +30,7 @@ public class MysqlManager {
         this.driverClass = properties.getProperty("DriverClass");
     }
 
+    @Step
     public void setResultToDB(HashMap<String, Long> products) {
         Connection con = null;
         Statement stmt = null;

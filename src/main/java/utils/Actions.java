@@ -43,45 +43,30 @@ public class Actions {
         return text;
     }
 
-    public boolean isElementPresent(WebElement element) {
-        if (element.isDisplayed())
-            return true;
-        return false;
-    }
-
     public void waitUntilElementHidden(String xpath, int attempts) {
         int count = 0;
-
-        try {
-            while (count <= attempts) {
-                if (webDriver.findElements(By.xpath(xpath)).isEmpty()) {
-                    return;
-                } else {
-                    Thread.sleep(500);
-                    count++;
-                }
+        while (count <= attempts) {
+            if (webDriver.findElements(By.xpath(xpath)).isEmpty()) {
+                return;
+            } else {
+                sleep(500);
+                count++;
             }
-        } catch (Exception e) {
-            e.printStackTrace();
         }
         logger.warn("Did not wait while the element is hiding [" + xpath + "]");
+        Assert.fail();
     }
 
     public WebElement waitUntilElementPresent(String xpath, int attempts) {
         int count = 0;
-
-        try {
-            while (count <= attempts) {
-                List<WebElement> elements = webDriver.findElements(By.xpath(xpath));
-                if (!elements.isEmpty()) {
-                    return elements.get(0);
-                } else {
-                    Thread.sleep(500);
-                    count++;
-                }
+        while (count <= attempts) {
+            List<WebElement> elements = webDriver.findElements(By.xpath(xpath));
+            if (!elements.isEmpty()) {
+                return elements.get(0);
+            } else {
+                sleep(500);
+                count++;
             }
-        } catch (Exception e) {
-            e.printStackTrace();
         }
         logger.warn("Did not wait while the element is displayed [" + xpath + "]");
         Assert.fail();
@@ -90,5 +75,13 @@ public class Actions {
 
     public String getElementAttribute(String attribute, WebElement webElement) {
         return webElement.getAttribute(attribute);
+    }
+
+    private void sleep(long time) {
+        try {
+            Thread.sleep(time);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 }

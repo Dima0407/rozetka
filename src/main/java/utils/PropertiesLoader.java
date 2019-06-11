@@ -6,10 +6,6 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
 
-/**
- * Created by Dmytro Torlop
- * on 03.06.19
- */
 public class PropertiesLoader {
 
     private static Logger logger = Logger.getLogger(PropertiesLoader.class.getName());

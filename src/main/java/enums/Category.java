@@ -1,9 +1,5 @@
 package enums;
 
-/**
- * Created by Dmytro Torlop
- * on 30.05.19
- */
 public enum Category {
 
     //categories level 1

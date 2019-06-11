@@ -1,5 +1,6 @@
 package excel;
 
+import io.qameta.allure.Step;
 import org.apache.log4j.Logger;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ss.usermodel.Cell;
@@ -13,11 +14,6 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-
-/**
- * Created by Dmytro Torlop
- * on 05.06.19
- */
 public class ExcelManager {
 
     Logger logger = Logger.getLogger(ExcelManager.class.getName());
@@ -41,6 +37,7 @@ public class ExcelManager {
         }
     }
 
+    @Step
     public void addValuesToSheet(HSSFWorkbook workbook, int sheetIndex, HashMap<String, Long> values) {
         Sheet s = workbook.getSheetAt(sheetIndex);
         int counter = 1;
@@ -54,10 +51,10 @@ public class ExcelManager {
         }
     }
 
+    @Step
     public void exportWorkbook(HSSFWorkbook workbook, String path) {
         File file = new File(path);
         file.getParentFile().mkdirs();
-
         try {
             FileOutputStream outFile = new FileOutputStream(file);
             workbook.write(outFile);

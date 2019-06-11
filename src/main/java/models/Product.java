@@ -1,9 +1,5 @@
 package models;
 
-/**
- * Created by Dmytro Torlop
- * on 30.05.19
- */
 public class Product {
 
     private String id;

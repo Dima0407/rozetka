@@ -8,10 +8,6 @@ import pages.parent.ProductsPage;
 import java.util.ArrayList;
 import java.util.Properties;
 
-/**
- * Created by Dmytro Torlop
- * on 30.05.19
- */
 public class SmartPhonePage extends ProductsPage {
 
     public SmartPhonePage(WebDriver webDriver, Properties properties) {
@@ -28,5 +24,4 @@ public class SmartPhonePage extends ProductsPage {
         excelManager.addHeadersToCells(workbook, 1, headers);
         return workbook;
     }
-
 }

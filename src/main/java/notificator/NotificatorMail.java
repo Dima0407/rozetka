@@ -1,5 +1,6 @@
 package notificator;
 
+import io.qameta.allure.Step;
 import org.apache.log4j.Logger;
 import utils.PropertiesLoader;
 
@@ -35,24 +36,20 @@ public class NotificatorMail {
         pass = properties.getProperty("mail.pass");
     }
 
-
+    @Step
     public void sendMessage(String pathTo, String text, String filePath) {
-
         String addressList = getAddressList(pathTo);
-
         Properties props = new Properties();
         props.put("mail.smtp.auth", "true");
         props.put("mail.smtp.starttls.enable", "true");
         props.put("mail.smtp.host", "smtp.gmail.com");
         props.put("mail.smtp.port", "587");
-
         Session session = Session.getInstance(props,
                 new Authenticator() {
                     protected PasswordAuthentication getPasswordAuthentication() {
                         return new PasswordAuthentication(user, pass);
                     }
                 });
-
         try {
             Message message = new MimeMessage(session);
             message.setFrom(new InternetAddress(from));

@@ -7,10 +7,6 @@ import pages.parent.ParentPage;
 
 import java.util.Properties;
 
-/**
- * Created by Dmytro Torlop
- * on 05.06.19
- */
 public class TovaryDlyaDomuPage extends ParentPage {
 
     public TovaryDlyaDomuPage(WebDriver webDriver, Properties properties) {
@@ -21,6 +17,6 @@ public class TovaryDlyaDomuPage extends ParentPage {
     public void goToCategory(Category category) {
         String xpath = ".//li/*/a[contains(@href, '" + category.getValue() + "')]";
         actions.clickOnElement(actions.waitUntilElementPresent(xpath, 20));
-        logger.info("Moved to category \"" +  category.name() + "\" [" + webDriver.getCurrentUrl() + "]");
+        logger.info("Moved to category \"" + category.name() + "\" [" + webDriver.getCurrentUrl() + "]");
     }
 }
