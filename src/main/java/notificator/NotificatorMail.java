@@ -37,7 +37,7 @@ public class NotificatorMail {
     }
 
     @Step
-    public void sendMessage(String pathTo, String text, String filePath) {
+    public void sendEmail(String pathTo, String text, String filePath) {
         String addressList = getAddressList(pathTo);
         Properties props = new Properties();
         props.put("mail.smtp.auth", "true");

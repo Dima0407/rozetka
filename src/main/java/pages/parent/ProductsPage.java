@@ -19,7 +19,7 @@ public abstract class ProductsPage extends ParentPage {
     }
 
     @Step
-    public void downloadYetPage() {
+    public void downloadYetProductPage() {
         String spinnerXpath = ".//div[@class = 'g-i-tile g-i-tile-catalog preloader-trigger run-animation']";
         String xpath = ".//a[@class = 'novisited g-i-more-link']";
         actions.clickOnElement(actions.waitUntilElementPresent(xpath, 20));
@@ -28,9 +28,9 @@ public abstract class ProductsPage extends ParentPage {
     }
 
     @Step
-    public void downloadYetPage(int countPages) {
+    public void downloadYetProductPages(int countPages) {
         for (int i = 0; i < countPages; i++) {
-            downloadYetPage();
+            downloadYetProductPage();
         }
     }
 

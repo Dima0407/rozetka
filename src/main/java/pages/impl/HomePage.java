@@ -24,9 +24,9 @@ public class HomePage extends ParentPage {
     }
 
     @Step
-    public void open() {
+    public void openHomePage() {
         actions.navigateToURL(url);
-        logger.info("Starting page is open [" + webDriver.getCurrentUrl() + "]");
+        logger.info("Starting page is openHomePage [" + webDriver.getCurrentUrl() + "]");
     }
 
     @Step
